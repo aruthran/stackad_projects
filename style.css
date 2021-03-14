@@ -1,11 +1,16 @@
 * {
     box-sizing: border-box;
     margin: 0;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    text-align: center;
+}
+
+html {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 nav {
+    text-align: center;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -25,10 +30,12 @@ nav a:hover {
 }
 
 header {
+    text-align: center;
     background-image: url("code_image1.jpg");
     background-size: cover;
     width: 100vw;
     height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: white;
     display: flex;
     justify-content: center;
@@ -39,12 +46,14 @@ header {
 }
 
 .join {
+    text-align: center;
     background-color: #9882AC;
     color: white;
     padding: 7px;
-    top: 165px;
+    top: 190px;
     left: 165px;
     border-radius: 1rem;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     border-style: none;
     box-shadow: 10px 5px 5px black;
 }
@@ -58,19 +67,81 @@ header {
 }
 
 .about {
+    text-align: center;
     background-color: #B185A7;
     color: white;
     height: auto;
     max-width: 100%;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     padding: 25px;
 }
 
 .plans {
+    text-align: center;
     color: black;
+    align-items: top;
+    display: flex;
     justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
     max-width: 100%;
     background-color: #FFF4E9;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     padding: 25px;
+}
+
+#plans-section {
+    text-align: center;
+    color: black;
+    background-color: #FFF4E9;
+    padding: 25px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.plans .plan {
+    background-color: white;
+    color: black;
+    border-radius: 5px;
+    text-align: left;
+    margin-right: 10px;
+    width: 275px;
+    line-height: 1.5;
+    padding: 10px;
+}
+
+.plans .plan button {
+    width: 85%;
+    margin-left: 12px;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #281E5D;
+    color: white;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 15px;
+    box-shadow: 5px 5px 10px black;
+}
+
+.plans .plan button:focus {
+    outline: none;
+}
+
+.plans .price {
+    font-size: 25px;
+}
+
+.plans .plan .top_section {
+    padding-bottom: 12px;
+    background-color: #281E5D;
+    color: white;
+    font-size: 25px;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.plans .plan .fa-check {
+    color: lightgreen;
+    padding-right: 10px;
 }
 
 .contact {
@@ -78,6 +149,8 @@ header {
     justify-content: center;
     color: white;
     height: 215px;
+    text-align: center;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     padding: 10px;
 }
 
@@ -88,17 +161,80 @@ header {
     font-size: 25px;
 }
 
-.contact a {
-    color: white;
+.contact .fa-facebook {
+    color: #4267B2;
+}
+
+.contact .fa-twitter {
+    color: #1DA1F2;
+}
+
+.contact .fa-linkedin {
+    color: #4267B2;
+}
+
+.contact .fa-instagram {
+    color: red;
 }
 
 footer {
+    text-align: center;
     background-color: #424B54;
     color: white;
     padding: 10px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 12px;
 }
 
 footer .fa-heart {
     color: red;
+}
+
+@media screen and (min-width: 480px) {
+    header {
+        text-align: center;
+        background-image: url("code_image.jpg");
+        background-size: cover;
+        width: 100vw;
+        height: 100vh;
+        font-size: 35px;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 0px;
+        flex-direction: column;
+        position: relative;
+    }
+
+    .join {
+        text-align: center;
+        background-color: #9882AC;
+        color: white;
+        padding: 7px;
+        top: 190px;
+        left: 165px;
+        border-radius: 1rem;
+        border-style: none;
+        box-shadow: 10px 5px 5px black; 
+    }
+
+    .plans .plan button:hover {
+        color: black;
+        background-color: white;
+        border: 2px solid blue;
+    }
+}
+
+@media screen and (max-width: 670px) {
+    .plans .plan {
+        background-color: white;
+        color: black;
+        border-radius: 5px;
+        text-align: left;
+        margin-bottom: 10px;
+        width: 275px;
+        line-height: 1.5;
+        padding: 10px;
+    }
 }
